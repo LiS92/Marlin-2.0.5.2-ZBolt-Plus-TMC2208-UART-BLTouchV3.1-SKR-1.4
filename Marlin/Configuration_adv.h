@@ -2073,17 +2073,17 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       700
+    #define Z_CURRENT       1000
     #define Z_CURRENT_HOME  Z_CURRENT
-    #define Z_MICROSTEPS     16
+    #define Z_MICROSTEPS     8
     #define Z_RSENSE          0.11
     #define Z_CHAIN_POS      -1
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      700
+    #define Z2_CURRENT      1000
     #define Z2_CURRENT_HOME Z2_CURRENT
-    #define Z2_MICROSTEPS    16
+    #define Z2_MICROSTEPS    8
     #define Z2_RSENSE         0.11
     #define Z2_CHAIN_POS     -1
   #endif
@@ -2112,7 +2112,7 @@
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      700
+    #define E1_CURRENT      800
     #define E1_MICROSTEPS    16
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
@@ -2278,24 +2278,24 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     150  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    150
-  #define Y_HYBRID_THRESHOLD     150
-  #define Y2_HYBRID_THRESHOLD    150
-  #define Z_HYBRID_THRESHOLD     150
-  #define Z2_HYBRID_THRESHOLD      3
-  #define Z3_HYBRID_THRESHOLD      3
-  #define Z4_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD    150
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
-  #define E6_HYBRID_THRESHOLD     30
-  #define E7_HYBRID_THRESHOLD     30
+  #define X_HYBRID_THRESHOLD     300  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    300
+  #define Y_HYBRID_THRESHOLD     300
+  #define Y2_HYBRID_THRESHOLD    300
+  #define Z_HYBRID_THRESHOLD     10
+  #define Z2_HYBRID_THRESHOLD    10
+  #define Z3_HYBRID_THRESHOLD    3
+  #define Z4_HYBRID_THRESHOLD    3
+  #define E0_HYBRID_THRESHOLD    200
+  #define E1_HYBRID_THRESHOLD    30
+  #define E2_HYBRID_THRESHOLD    30
+  #define E3_HYBRID_THRESHOLD    30
+  #define E4_HYBRID_THRESHOLD    30
+  #define E5_HYBRID_THRESHOLD    30
+  #define E6_HYBRID_THRESHOLD    30
+  #define E7_HYBRID_THRESHOLD    30
 
   /**
    * Use StallGuard2 to home / probe X, Y, Z.
