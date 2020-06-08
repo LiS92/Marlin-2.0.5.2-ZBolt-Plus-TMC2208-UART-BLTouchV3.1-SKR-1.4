@@ -177,14 +177,14 @@
  * Thermal Protection parameters for the bed are just as above for hotends.
  */
 #if ENABLED(THERMAL_PROTECTION_BED)
-  #define THERMAL_PROTECTION_BED_PERIOD        20 // Seconds
-  #define THERMAL_PROTECTION_BED_HYSTERESIS     2 // Degrees Celsius
+  #define THERMAL_PROTECTION_BED_PERIOD        120 // Seconds
+  #define THERMAL_PROTECTION_BED_HYSTERESIS     10 // Degrees Celsius
 
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD                60 // Seconds
-  #define WATCH_BED_TEMP_INCREASE               2 // Degrees Celsius
+  #define WATCH_BED_TEMP_PERIOD                120 // Seconds
+  #define WATCH_BED_TEMP_INCREASE               10 // Degrees Celsius
 #endif
 
 /**
@@ -2073,17 +2073,17 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       750
+    #define Z_CURRENT       900
     #define Z_CURRENT_HOME  Z_CURRENT
-    #define Z_MICROSTEPS     8
+    #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.11
     #define Z_CHAIN_POS      -1
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      750
+    #define Z2_CURRENT      900
     #define Z2_CURRENT_HOME Z2_CURRENT
-    #define Z2_MICROSTEPS    8
+    #define Z2_MICROSTEPS    16
     #define Z2_RSENSE         0.11
     #define Z2_CHAIN_POS     -1
   #endif
@@ -2105,7 +2105,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      700
+    #define E0_CURRENT      800
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
